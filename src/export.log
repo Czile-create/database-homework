@@ -1,0 +1,19 @@
+;;; 
+Export: Release 11.2.0.1.0 - Production on 星期五 3月 4 20:18:43 2022
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+连接到: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+启动 "SCOTT"."SYS_EXPORT_TABLE_01":  scott/********@ORCL tables=user_info dumpfile=user_info.dmp directory=dump_dir 
+正在使用 BLOCKS 方法进行估计...
+处理对象类型 TABLE_EXPORT/TABLE/TABLE_DATA
+使用 BLOCKS 方法的总估计: 127 MB
+处理对象类型 TABLE_EXPORT/TABLE/TABLE
+处理对象类型 TABLE_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+. . 导出了 "SCOTT"."USER_INFO"                         104.9 MB 5000000 行
+已成功加载/卸载了主表 "SCOTT"."SYS_EXPORT_TABLE_01" 
+******************************************************************************
+SCOTT.SYS_EXPORT_TABLE_01 的转储文件集为:
+  D:\WORK\数据库\USER_INFO.DMP
+作业 "SCOTT"."SYS_EXPORT_TABLE_01" 已于 20:18:48 成功完成

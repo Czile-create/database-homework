@@ -1,0 +1,636 @@
+<!DOCTYPE html><html><head>
+      <title>14</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Czile\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%AC14%E6%AC%A1%E4%BD%9C%E4%B8%9A">&#x6570;&#x636E;&#x5E93;&#x7B2C;14&#x6B21;&#x4F5C;&#x4E1A;</h1>
+
+<p><code>19336035</code> <code>&#x9648;&#x6893;&#x4E50;</code></p>
+<ol>
+<li>&#x5229;&#x7528;&#x5185;&#x7F6E;&#x5305; <code>DBMS_JOB</code> &#x5EFA;&#x7ACB;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#xFF0C;&#x6BCF; 5 &#x5206;&#x949F;&#x5728;&#x7279;&#x5B9A;&#x8868;&#x4E2D;&#x63D2;&#x5165;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A; <code>emp</code> &#x8868;&#x7684;&#x884C;&#x6570;&#x4EE5;&#x53CA;&#x65F6;&#x95F4;&#x6233;&#x3002;</li>
+</ol>
+<p><u> &#x521B;&#x5EFA;&#x8BB0;&#x5F55;&#x8868; </u></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-create">create</span> <span class="token keyword keyword-table">table</span> emp_record <span class="token punctuation">(</span>
+    <span class="token keyword keyword-time">time</span> <span class="token keyword keyword-date">date</span><span class="token punctuation">,</span>
+    record number<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p><u> &#x521B;&#x5EFA;&#x8BB0;&#x5F55;&#x8FC7;&#x7A0B; </u></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-create">create</span> <span class="token operator">or</span> <span class="token keyword keyword-replace">replace</span> <span class="token keyword keyword-procedure">procedure</span> emprec <span class="token operator">is</span>
+<span class="token keyword keyword-begin">begin</span>
+    <span class="token keyword keyword-insert">insert</span> <span class="token keyword keyword-into">into</span> emp_record <span class="token keyword keyword-values">values</span><span class="token punctuation">(</span>
+        sysdate<span class="token punctuation">,</span> 
+        <span class="token punctuation">(</span><span class="token keyword keyword-select">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword keyword-from">from</span> emp<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-commit">commit</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+</pre><p><u> &#x521B;&#x5EFA;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1; </u></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-declare">declare</span> jobnum number :<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-begin">begin</span>
+    dbms_job<span class="token punctuation">.</span>submit<span class="token punctuation">(</span>
+        :jobnum<span class="token punctuation">,</span> 
+        <span class="token string">&apos;emprec;&apos;</span><span class="token punctuation">,</span> 
+        sysdate<span class="token punctuation">,</span> 
+        <span class="token string">&apos;sysdate + 1/24/12&apos;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-commit">commit</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+</pre><p><img src="../img/67.png" alt></p>
+<ol start="2">
+<li>&#x6279;&#x91CF;&#x521B;&#x5EFA; 99 &#x4E2A;&#x7528;&#x6237; A01-A99&#xFF0C;&#x53E3;&#x4EE4;&#x5747;&#x4E3A; tiger&#xFF0C;&#x5728;&#x8FD9; 99 &#x4F4D;&#x7528;&#x6237;&#x4E0B;&#x90FD;&#x5EFA;&#x7ACB; emp &#x8868;&#x5E76;&#x4E14;&#x628A; scott &#x7684; emp &#x8868;&#x5185;&#x5BB9;&#x590D;&#x5236;&#x8FC7;&#x53BB;&#x3002;</li>
+</ol>
+<p><u>&#x57FA;&#x672C;&#x60F3;&#x6CD5;</u><br>
+&#x5229;&#x7528; PL/SQL &#x7684;&#x5FAA;&#x73AF;&#x91CD;&#x590D;&#x4E0B;&#x5217;&#x8BED;&#x53E5;&#xFF1A;<br>
+<img src="../img/68.png" alt></p>
+<p><u>&#x4EE3;&#x7801;</u></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-declare">declare</span>
+    usernum varchar2<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-begin">begin</span>
+    <span class="token keyword keyword-for">for</span> i <span class="token operator">in</span> <span class="token number">1.</span><span class="token number">.99</span> <span class="token keyword keyword-loop">loop</span>
+        usernum :<span class="token operator">=</span> substr<span class="token punctuation">(</span>to_char<span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token string">&apos;09&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-execute">execute</span> immediate <span class="token string">&apos;create user A&apos;</span><span class="token operator">||</span>usernum<span class="token operator">||</span><span class="token string">&apos; identified by tiger&apos;</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-execute">execute</span> immediate <span class="token string">&apos;grant resource,connect,dba to A&apos;</span><span class="token operator">||</span>usernum<span class="token punctuation">;</span>
+        <span class="token keyword keyword-execute">execute</span> immediate <span class="token string">&apos;create table A&apos;</span><span class="token operator">||</span>usernum<span class="token operator">||</span><span class="token string">&apos;.emp as (select * from scott.emp)&apos;</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-loop">loop</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+</pre><p><u>&#x67E5;&#x770B;&#x6548;&#x679C;</u></p>
+<p><img src="../img/70.png" alt></p>
+<ol start="3">
+<li>&#x5229;&#x7528; <code>UTL_FILE</code> &#x5305;&#xFF08;&#x800C;&#x4E0D;&#x662F; <code>sqlldr</code> &#xFF09;&#x628A;&#x201C;&#x4E0A;&#x8BC1;&#x6307;&#x6570;&#x5386;&#x53F2;&#x6570;&#x636E;&#x201D;&#x4E2D;&#x7684;&#x80A1;&#x7968;&#x4EA4;&#x6613;&#x4FE1;&#x606F;&#x5BFC;&#x5165;&#x5230; Oracle &#x7684;&#x6307;&#x5B9A;&#x8868;&#x4E2D;</li>
+</ol>
+<p><u>&#x521B;&#x5EFA;&#x8868;</u></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-create">create</span> <span class="token keyword keyword-table">table</span> ss001 <span class="token punctuation">(</span>
+    <span class="token keyword keyword-day">day</span>     <span class="token keyword keyword-char">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword keyword-open">open</span>    number<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    high    number<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    low     number<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword keyword-close">close</span>   number<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    adjclose    number<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    volume  number<span class="token punctuation">(</span><span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p><u>&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x53D8;&#x91CF;</u></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-create">create</span> <span class="token operator">or</span> <span class="token keyword keyword-replace">replace</span> directory <span class="token keyword keyword-data">data</span> <span class="token keyword keyword-as">as</span> <span class="token string">&apos;data&apos;</span><span class="token punctuation">;</span>
+</pre><p><u>&#x5BFC;&#x5165;&#x6570;&#x636E;</u></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-declare">declare</span> 
+    l_file  utl_file<span class="token punctuation">.</span>file_type<span class="token punctuation">;</span>
+    l_text  varchar2<span class="token punctuation">(</span><span class="token number">32767</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    i       number<span class="token punctuation">;</span>
+<span class="token keyword keyword-begin">begin</span>
+    l_file :<span class="token operator">=</span> utl_file<span class="token punctuation">.</span>fopen<span class="token punctuation">(</span><span class="token string">&apos;DATA&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;000001.SS.csv&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;R&apos;</span><span class="token punctuation">,</span> <span class="token number">32767</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-for">for</span> i <span class="token operator">in</span> <span class="token number">1.</span><span class="token number">.6189</span> <span class="token keyword keyword-loop">loop</span>
+        utl_file<span class="token punctuation">.</span>get_line<span class="token punctuation">(</span>l_file<span class="token punctuation">,</span> l_text<span class="token punctuation">,</span> <span class="token number">32767</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-if">if</span> instr<span class="token punctuation">(</span>l_text<span class="token punctuation">,</span> <span class="token string">&apos;null&apos;</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword keyword-then">then</span>
+            <span class="token keyword keyword-insert">insert</span> <span class="token keyword keyword-into">into</span> ss001 <span class="token keyword keyword-values">values</span><span class="token punctuation">(</span>
+                regexp_substr<span class="token punctuation">(</span>l_text<span class="token punctuation">,</span> <span class="token string">&apos;[^,]+&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                regexp_substr<span class="token punctuation">(</span>l_text<span class="token punctuation">,</span> <span class="token string">&apos;[^,]+&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                regexp_substr<span class="token punctuation">(</span>l_text<span class="token punctuation">,</span> <span class="token string">&apos;[^,]+&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                regexp_substr<span class="token punctuation">(</span>l_text<span class="token punctuation">,</span> <span class="token string">&apos;[^,]+&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                regexp_substr<span class="token punctuation">(</span>l_text<span class="token punctuation">,</span> <span class="token string">&apos;[^,]+&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                regexp_substr<span class="token punctuation">(</span>l_text<span class="token punctuation">,</span> <span class="token string">&apos;[^,]+&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                regexp_substr<span class="token punctuation">(</span>l_text<span class="token punctuation">,</span> <span class="token string">&apos;[^,]+&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-loop">loop</span><span class="token punctuation">;</span>
+    utl_file<span class="token punctuation">.</span>fclose<span class="token punctuation">(</span>l_file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-commit">commit</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+</pre><p><u>&#x6548;&#x679C;&#x5C55;&#x793A;</u></p>
+<p><img src="../img/71.png" alt></p>
+<ol start="4">
+<li>&#x5229;&#x7528; <code>UTL_HTTP</code> &#x5305;&#x6293;&#x53D6; <a href="http://www.itpub.net"><code>ITPUB</code> &#x7F51;&#x7AD9;</a>&#x7684;&#x9996;&#x9875;&#x548C;&#x6240;&#x6709;&#x6B21;&#x7EA7;&#x9875;&#x9762;&#xFF0C;<em>&#x6CE8;&#x610F;&#x4E0D;&#x6293;&#x5916;&#x94FE;&#xFF0C;&#x4E0D;&#x91CD;&#x590D;&#x6293;&#x53D6;&#xFF0C;&#x628A;&#x7ED3;&#x679C;&#x8BB0;&#x5F55;&#x5728;&#x4E00;&#x5F20;&#x8868;&#x4E2D;&#xFF0C;&#x5305;&#x542B;&#x94FE;&#x63A5;&#xFF0C;&#x7F51;&#x9875;&#x5168;&#x6587;&#xFF0C;&#x4EE5;&#x53CA;&#x4ECE;&#x7F51;&#x9875;&#x4E2D;&#x63D0;&#x53D6;&#x7684;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#xFF0C;&#x4F8B;&#x5982;&#x6807;&#x9898;&#x7B49;</em>&#xFF08;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x7528; <code>Oracle</code> &#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x51FD;&#x6570;&#x65CF; <code>regex_xxxx</code>&#xFF09;</li>
+</ol>
+<p><u>&#x4FEE;&#x6539;&#x63A7;&#x5236;&#x8BBF;&#x95EE;&#x5217;&#x8868;</u><br>
+&#x5C06;<a href="ITPUB.NET">ITPUB</a>&#x52A0;&#x5165;&#x5230;&#x63A7;&#x5236;&#x8BBF;&#x95EE;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x5E76;&#x6388;&#x4E88; scott &#x8BBF;&#x95EE;&#x7684;&#x6743;&#x9650;&#x3002;&#x8FD9;&#x53EA;&#x9700;&#x8981;&#x5728; <code>sys</code> &#x7528;&#x6237;&#x4E0B;&#x8FD0;&#x884C;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-begin">begin</span>
+    dbms_network_acl_admin<span class="token punctuation">.</span>create_acl <span class="token punctuation">(</span>         <span class="token comment">-- &#x521B;&#x5EFA;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x6587;&#x4EF6;&#xFF08;ACL&#xFF09;</span>
+        acl         <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;http.xml&apos;</span><span class="token punctuation">,</span>              <span class="token comment">-- &#x6587;&#x4EF6;&#x540D;&#x79F0;</span>
+        description <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;HTTP Access&apos;</span><span class="token punctuation">,</span>           <span class="token comment">-- &#x63CF;&#x8FF0;</span>
+        principal   <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;SCOTT&apos;</span><span class="token punctuation">,</span>                 <span class="token comment">-- &#x6388;&#x6743;&#x6216;&#x8005;&#x53D6;&#x6D88;&#x6388;&#x6743;&#x8D26;&#x53F7;&#xFF0C;&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;</span>
+        is_grant    <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token boolean">TRUE</span><span class="token punctuation">,</span>                    <span class="token comment">-- &#x6388;&#x6743;&#x8FD8;&#x662F;&#x53D6;&#x6D88;&#x6388;&#x6743;</span>
+        privilege   <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;connect&apos;</span><span class="token punctuation">,</span>               <span class="token comment">-- &#x6388;&#x6743;&#x6216;&#x8005;&#x53D6;&#x6D88;&#x6388;&#x6743;&#x7684;&#x6743;&#x9650;&#x5217;&#x8868;</span>
+        start_date  <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token boolean">null</span><span class="token punctuation">,</span>                    <span class="token comment">-- &#x8D77;&#x59CB;&#x65E5;&#x671F;</span>
+        end_date    <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token boolean">null</span>                     <span class="token comment">-- &#x7ED3;&#x675F;&#x65E5;&#x671F;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    dbms_network_acl_admin<span class="token punctuation">.</span>add_privilege <span class="token punctuation">(</span>      <span class="token comment">-- &#x6DFB;&#x52A0;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x5217;&#x8868;&#x9879;</span>
+        acl        <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;http.xml&apos;</span><span class="token punctuation">,</span>               <span class="token comment">-- &#x521A;&#x624D;&#x521B;&#x5EFA;&#x7684;acl&#x540D;&#x79F0;</span>
+        principal  <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;SCOTT&apos;</span><span class="token punctuation">,</span>                  <span class="token comment">-- &#x6388;&#x6743;&#x6216;&#x53D6;&#x6D88;&#x6388;&#x6743;&#x7528;&#x6237;</span>
+        is_grant   <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token boolean">TRUE</span><span class="token punctuation">,</span>                     <span class="token comment">-- &#x4E0E;&#x4E0A;&#x540C;</span>
+        privilege  <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;resolve&apos;</span><span class="token punctuation">,</span>                <span class="token comment">-- &#x6743;&#x9650;&#x5217;&#x8868;</span>
+        start_date <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token boolean">null</span><span class="token punctuation">,</span>
+        end_date   <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token boolean">null</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    dbms_network_acl_admin<span class="token punctuation">.</span>assign_acl <span class="token punctuation">(</span>         <span class="token comment">-- &#x8BE5;&#x6BB5;&#x547D;&#x4EE4;&#x610F;&#x601D;&#x662F;&#x5141;&#x8BB8;&#x8BBF;&#x95EE;acl&#x540D;&#x4E3A;utl_http.xml&#x4E0B;&#x6388;&#x6743;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x4F7F;&#x7528;oracle&#x7F51;&#x7EDC;&#x8BBF;&#x95EE;&#x5305;&#xFF0C;&#x6240;&#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x7684;&#x76EE;&#x7684;&#x4E3B;&#x673A;&#xFF0C;&#x53CA;&#x5176;&#x7AEF;&#x53E3;&#x8303;&#x56F4;&#x3002;</span>
+        acl        <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;http.xml&apos;</span><span class="token punctuation">,</span>
+        host       <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;*&apos;</span><span class="token punctuation">,</span>                      
+                                                <span class="token comment">-- &#x4E14;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;ip&#x5730;&#x5740;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x57DF;&#x540D;&#xFF0C;&#x82E5;&#x7528;localhost&#xFF0C;&#x5F53;oracle&#x4E0D;&#x662F;&#x5B89;&#x88C5;&#x5728;&#x672C;&#x673A;&#x4E0A;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x95EE;&#x9898;</span>
+        lower_port <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">,</span>                        <span class="token comment">-- &#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x7684;&#x8D77;&#x59CB;&#x7AEF;&#x53E3;&#x53F7;</span>
+        upper_port <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token number">9999</span>                      <span class="token comment">-- &#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x7684;&#x622A;&#x6B62;&#x7AEF;&#x53E3;&#x53F7;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-commit">commit</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+</pre><p><u>&#x722C;&#x53D6;&#x7F51;&#x7AD9;&#x4FE1;&#x606F;</u></p>
+<p>&#x7531;&#x4E8E;&#x4FE1;&#x606F;&#x8F83;&#x957F;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>clob</code> &#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5E76;&#x5206;&#x5757;&#x8F93;&#x51FA;&#x3002;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x722C;&#x53D6;&#x7F51;&#x7AD9;&#x4FE1;&#x606F;&#xFF0C;&#x5728; <code>scott</code> &#x4E0B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-create">create</span> <span class="token operator">or</span> <span class="token keyword keyword-replace">replace</span> <span class="token keyword keyword-function">function</span> http_get<span class="token punctuation">(</span>u varchar2<span class="token punctuation">)</span>
+<span class="token keyword keyword-return">return</span> clob <span class="token keyword keyword-as">as</span>
+<span class="token keyword keyword-begin">begin</span>
+    <span class="token keyword keyword-declare">declare</span>
+        resp    utl_http<span class="token punctuation">.</span>html_pieces<span class="token punctuation">;</span>
+        txt     clob :<span class="token operator">=</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">;</span>
+        i       pls_integer<span class="token punctuation">;</span>
+    <span class="token keyword keyword-begin">begin</span>
+        resp :<span class="token operator">=</span> utl_http<span class="token punctuation">.</span>request_pieces<span class="token punctuation">(</span>u<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-for">for</span> i <span class="token operator">in</span> <span class="token number">1.</span><span class="token punctuation">.</span>resp<span class="token punctuation">.</span>count <span class="token keyword keyword-loop">loop</span>
+            txt :<span class="token operator">=</span> txt <span class="token operator">||</span> resp<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-loop">loop</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-return">return</span> txt<span class="token punctuation">;</span>
+    <span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+
+</pre><p><u>&#x9636;&#x6BB5;&#x6027;&#x6548;&#x679C;&#x5C55;&#x793A;</u><br>
+&#x5C06;&#x5B58;&#x653E;&#x4E8E; <code>clob</code> &#x4E2D;&#x7684;&#x6570;&#x636E;&#x53D6;&#x51FA;&#x5E76;&#x53BB;&#x9664;&#x91CD;&#x590D;&#x7684;&#x7A7A;&#x683C;&#x548C;&#x6362;&#x884C;&#xFF0C;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-create">create</span> <span class="token operator">or</span> <span class="token keyword keyword-replace">replace</span> <span class="token keyword keyword-procedure">procedure</span> print_clob<span class="token punctuation">(</span>c clob<span class="token punctuation">)</span> <span class="token operator">is</span>
+    i   <span class="token keyword keyword-int">int</span> :<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-begin">begin</span>    
+    <span class="token keyword keyword-loop">loop</span>  
+        <span class="token keyword keyword-exit">exit</span> <span class="token keyword keyword-when">when</span> i <span class="token operator">&gt;</span> dbms_lob<span class="token punctuation">.</span>getlength<span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+        dbms_output<span class="token punctuation">.</span>put_line<span class="token punctuation">(</span>
+            translate<span class="token punctuation">(</span><span class="token keyword keyword-replace">replace</span><span class="token punctuation">(</span>
+                dbms_lob<span class="token punctuation">.</span>substr<span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&apos;  &apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&apos;</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span> chr<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token operator">||</span>chr<span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token operator">||</span>chr<span class="token punctuation">(</span><span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&apos;   &apos;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+        i :<span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">255</span><span class="token punctuation">;</span>  
+    <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-loop">loop</span><span class="token punctuation">;</span>  
+<span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+
+<span class="token keyword keyword-set">set</span> serveroutput <span class="token keyword keyword-on">on</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-declare">declare</span>
+    c clob<span class="token punctuation">;</span>
+<span class="token keyword keyword-begin">begin</span>
+    c :<span class="token operator">=</span> http_get<span class="token punctuation">(</span><span class="token string">&apos;itpub.net&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    print_clob<span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+</pre><p><img src="../img/72.png" alt></p>
+<p><u>&#x7B5B;&#x9009;&#x6709;&#x7528;&#x4FE1;&#x606F;</u><br>
+&#x5148;&#x5EFA;&#x7ACB;&#x4E00;&#x5F20;&#x8868;&#x683C;&#xFF0C;&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x7F51;&#x7AD9;&#x7684;&#x6709;&#x7528;&#x4FE1;&#x606F;&#xFF0C;&#x8868;&#x683C;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-create">create</span> <span class="token keyword keyword-table">table</span> webinfo <span class="token punctuation">(</span>
+    website varchar2<span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    label varchar2<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    sublabel varchar2<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    content varchar2<span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x6355;&#x83B7;&#x7F51;&#x7AD9;&#x4E2D;&#x6807;&#x7B7E;&#x4E3A; <code>title</code> &#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-create">create</span> <span class="token operator">or</span> <span class="token keyword keyword-replace">replace</span> <span class="token keyword keyword-procedure">procedure</span> bs<span class="token punctuation">(</span>u varchar2<span class="token punctuation">)</span> <span class="token operator">is</span> 
+<span class="token keyword keyword-begin">begin</span>
+    <span class="token keyword keyword-declare">declare</span>
+        c clob<span class="token punctuation">;</span>
+        v varchar2<span class="token punctuation">(</span><span class="token number">32767</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        i <span class="token keyword keyword-int">int</span> :<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-begin">begin</span>
+        c :<span class="token operator">=</span> http_get<span class="token punctuation">(</span>u<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-loop">loop</span>
+            <span class="token comment">-- &#x622A;&#x53D6;&#x4FE1;&#x606F;&#x7247;&#x6BB5;&#x7528;&#x4E8E;&#x5904;&#x7406;</span>
+            <span class="token keyword keyword-exit">exit</span> <span class="token keyword keyword-when">when</span> i <span class="token operator">&gt;</span> dbms_lob<span class="token punctuation">.</span>getlength<span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            v :<span class="token operator">=</span> <span class="token keyword keyword-replace">replace</span><span class="token punctuation">(</span>dbms_lob<span class="token punctuation">.</span>substr<span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">32767</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&apos; &apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            i :<span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">20000</span><span class="token punctuation">;</span>
+
+            <span class="token comment">-- &#x5229;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x627E;&#x5230; &lt;title&gt; &#x6807;&#x7B7E;&#x7684;&#x5185;&#x5BB9;</span>
+            v :<span class="token operator">=</span> regexp_substr<span class="token punctuation">(</span>v<span class="token punctuation">,</span> <span class="token string">&apos;&lt;title&gt;.*?&lt;/title&gt;&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            v :<span class="token operator">=</span> substr<span class="token punctuation">(</span>v<span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> length<span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-if">if</span> v <span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">null</span> <span class="token keyword keyword-then">then</span>
+                <span class="token keyword keyword-insert">insert</span> <span class="token keyword keyword-into">into</span> webinfo <span class="token keyword keyword-values">values</span><span class="token punctuation">(</span>
+                    u<span class="token punctuation">,</span>
+                    <span class="token string">&apos;title&apos;</span><span class="token punctuation">,</span>
+                    <span class="token boolean">null</span><span class="token punctuation">,</span>
+                    v
+                <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-loop">loop</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-commit">commit</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+</pre><p>&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../img/73.png" alt></p>
+<p><u>&#x627E;&#x51FA;&#x7F51;&#x7AD9;&#x6240;&#x6709;&#x4E8C;&#x7EA7;&#x94FE;&#x63A5;</u></p>
+<p>&#x4F7F;&#x7528;&#x627E; <code>title</code> &#x7684;&#x7ECF;&#x9A8C;&#xFF0C;&#x627E;&#x51FA;&#x6240;&#x6709;&#x6807;&#x7B7E;&#x4E3A; <code>a</code> &#x7684;&#x94FE;&#x63A5;&#x4EE5;&#x53CA;&#x63CF;&#x8FF0;&#xFF0C;&#x5E76;&#x5BF9;&#x8FD9;&#x4E9B;&#x94FE;&#x63A5;&#x722C;&#x53D6;&#x6E90;&#x4EE3;&#x7801;&#x5206;&#x6790;&#x51FA;&#x5176; <code>title</code>&#x3002;</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-set">set</span> serveroutput <span class="token keyword keyword-on">on</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-create">create</span> <span class="token operator">or</span> <span class="token keyword keyword-replace">replace</span> <span class="token keyword keyword-procedure">procedure</span> get_link<span class="token punctuation">(</span>u varchar2<span class="token punctuation">)</span> <span class="token operator">is</span> 
+<span class="token keyword keyword-begin">begin</span>
+    <span class="token keyword keyword-declare">declare</span>
+        c clob<span class="token punctuation">;</span>
+        v varchar2<span class="token punctuation">(</span><span class="token number">32767</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        l varchar2<span class="token punctuation">(</span><span class="token number">32767</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        t varchar2<span class="token punctuation">(</span><span class="token number">32767</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        i <span class="token keyword keyword-int">int</span> :<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        j <span class="token keyword keyword-int">int</span> :<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-begin">begin</span>
+        c :<span class="token operator">=</span> http_get<span class="token punctuation">(</span>u<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&lt;&lt;</span>first_loop<span class="token operator">&gt;&gt;</span>
+        <span class="token keyword keyword-loop">loop</span>
+            <span class="token comment">-- &#x622A;&#x53D6;&#x4FE1;&#x606F;&#x7247;&#x6BB5;&#x7528;&#x4E8E;&#x5904;&#x7406;</span>
+            <span class="token keyword keyword-exit">exit</span> first_loop <span class="token keyword keyword-when">when</span> i <span class="token operator">&gt;</span> dbms_lob<span class="token punctuation">.</span>getlength<span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            v :<span class="token operator">=</span> <span class="token keyword keyword-replace">replace</span><span class="token punctuation">(</span>dbms_lob<span class="token punctuation">.</span>substr<span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">32767</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&apos; &apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            i :<span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">20000</span><span class="token punctuation">;</span>
+            j :<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+            <span class="token comment">-- &#x5229;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x627E;&#x5230; &lt;a&gt; &#x6807;&#x7B7E;&#x7684;&#x5185;&#x5BB9;</span>
+            <span class="token operator">&lt;&lt;</span>second_loop<span class="token operator">&gt;&gt;</span>
+            <span class="token keyword keyword-loop">loop</span>
+                t :<span class="token operator">=</span> regexp_substr<span class="token punctuation">(</span>v<span class="token punctuation">,</span> <span class="token string">&apos;&lt;a.*?&lt;/a&gt;&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                j :<span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-exit">exit</span> second_loop <span class="token keyword keyword-when">when</span> t <span class="token operator">is</span> <span class="token boolean">null</span><span class="token punctuation">;</span>
+                
+                <span class="token comment">-- &#x627E;&#x51FA;&#x94FE;&#x63A5;</span>
+                l :<span class="token operator">=</span> regexp_substr<span class="token punctuation">(</span>t<span class="token punctuation">,</span> <span class="token string">&apos;href=&quot;.*?&quot;&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                l :<span class="token operator">=</span> substr<span class="token punctuation">(</span>l<span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> length<span class="token punctuation">(</span>l<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-if">if</span> l <span class="token operator">like</span> <span class="token string">&apos;/%&apos;</span> <span class="token keyword keyword-then">then</span>
+                    l :<span class="token operator">=</span> <span class="token string">&apos;http://www.itpub.net&apos;</span> <span class="token operator">||</span> l<span class="token punctuation">;</span>
+                <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">;</span>
+                dbms_output<span class="token punctuation">.</span>put_line<span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                <span class="token comment">-- &#x627E;&#x51FA;&#x63CF;&#x8FF0;</span>
+                t :<span class="token operator">=</span> regexp_substr<span class="token punctuation">(</span>t<span class="token punctuation">,</span> <span class="token string">&apos;&gt;.*&lt;&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                t :<span class="token operator">=</span> substr<span class="token punctuation">(</span>t<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> length<span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                dbms_output<span class="token punctuation">.</span>put_line<span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-loop">loop</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-loop">loop</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-commit">commit</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+</pre><p>&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../img/74.png" alt></p>
+<p><u>&#x7EFC;&#x5408;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;</u></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-create">create</span> <span class="token operator">or</span> <span class="token keyword keyword-replace">replace</span> <span class="token keyword keyword-procedure">procedure</span> record_webinfo<span class="token punctuation">(</span>u varchar2<span class="token punctuation">)</span> <span class="token operator">is</span> 
+<span class="token keyword keyword-begin">begin</span>
+    <span class="token keyword keyword-declare">declare</span>
+        c clob<span class="token punctuation">;</span>
+        v varchar2<span class="token punctuation">(</span><span class="token number">32767</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        l varchar2<span class="token punctuation">(</span><span class="token number">32767</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        t varchar2<span class="token punctuation">(</span><span class="token number">32767</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        i <span class="token keyword keyword-int">int</span> :<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        j <span class="token keyword keyword-int">int</span> :<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-begin">begin</span>
+        c :<span class="token operator">=</span> http_get<span class="token punctuation">(</span>u<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bs<span class="token punctuation">(</span>u<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-commit">commit</span><span class="token punctuation">;</span>
+        <span class="token operator">&lt;&lt;</span>first_loop<span class="token operator">&gt;&gt;</span>
+        <span class="token keyword keyword-loop">loop</span>
+            <span class="token comment">-- &#x622A;&#x53D6;&#x4FE1;&#x606F;&#x7247;&#x6BB5;&#x7528;&#x4E8E;&#x5904;&#x7406;</span>
+            <span class="token keyword keyword-exit">exit</span> first_loop <span class="token keyword keyword-when">when</span> i <span class="token operator">&gt;</span> dbms_lob<span class="token punctuation">.</span>getlength<span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            v :<span class="token operator">=</span> <span class="token keyword keyword-replace">replace</span><span class="token punctuation">(</span>dbms_lob<span class="token punctuation">.</span>substr<span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">32767</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&apos; &apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            i :<span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">20000</span><span class="token punctuation">;</span>
+            j :<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+            <span class="token comment">-- &#x5229;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x627E;&#x5230; &lt;a&gt; &#x6807;&#x7B7E;&#x7684;&#x5185;&#x5BB9;</span>
+            <span class="token operator">&lt;&lt;</span>second_loop<span class="token operator">&gt;&gt;</span>
+            <span class="token keyword keyword-loop">loop</span>
+                t :<span class="token operator">=</span> regexp_substr<span class="token punctuation">(</span>v<span class="token punctuation">,</span> <span class="token string">&apos;&lt;a.*?&lt;/a&gt;&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                j :<span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-exit">exit</span> second_loop <span class="token keyword keyword-when">when</span> t <span class="token operator">is</span> <span class="token boolean">null</span><span class="token punctuation">;</span>
+                
+                <span class="token comment">-- &#x627E;&#x51FA;&#x94FE;&#x63A5;</span>
+                l :<span class="token operator">=</span> regexp_substr<span class="token punctuation">(</span>t<span class="token punctuation">,</span> <span class="token string">&apos;href=&quot;.*?&quot;&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                l :<span class="token operator">=</span> substr<span class="token punctuation">(</span>l<span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> length<span class="token punctuation">(</span>l<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-if">if</span> l <span class="token operator">like</span> <span class="token string">&apos;/%&apos;</span> <span class="token keyword keyword-then">then</span>
+                    l :<span class="token operator">=</span> <span class="token string">&apos;http://www.itpub.net&apos;</span> <span class="token operator">||</span> l<span class="token punctuation">;</span>
+                <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-if">if</span> l <span class="token operator">like</span> <span class="token string">&apos;http:%&apos;</span> <span class="token keyword keyword-then">then</span>
+                    <span class="token comment">-- &#x8BB0;&#x5F55;</span>
+                    <span class="token keyword keyword-insert">insert</span> <span class="token keyword keyword-into">into</span> webinfo <span class="token keyword keyword-values">values</span> <span class="token punctuation">(</span>
+                        u<span class="token punctuation">,</span>
+                        <span class="token string">&apos;a&apos;</span><span class="token punctuation">,</span>
+                        <span class="token string">&apos;href&apos;</span><span class="token punctuation">,</span>
+                        l
+                    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                    <span class="token comment">-- &#x627E;&#x51FA;&#x63CF;&#x8FF0;</span>
+                    t :<span class="token operator">=</span> regexp_substr<span class="token punctuation">(</span>t<span class="token punctuation">,</span> <span class="token string">&apos;&gt;.*&lt;&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    t :<span class="token operator">=</span> substr<span class="token punctuation">(</span>t<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> length<span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword keyword-insert">insert</span> <span class="token keyword keyword-into">into</span> webinfo <span class="token keyword keyword-values">values</span> <span class="token punctuation">(</span>
+                        u<span class="token punctuation">,</span>
+                        <span class="token string">&apos;a&apos;</span><span class="token punctuation">,</span>
+                        <span class="token boolean">null</span><span class="token punctuation">,</span>
+                        t
+                    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword keyword-commit">commit</span><span class="token punctuation">;</span>
+                    <span class="token keyword keyword-if">if</span> l <span class="token operator">like</span> <span class="token string">&apos;%itpub.net%&apos;</span> <span class="token keyword keyword-then">then</span>
+                        bs<span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-loop">loop</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-loop">loop</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-commit">commit</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-end">end</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+</pre><p><img src="../img/75.png" alt></p>
+<p><u>&#x7B5B;&#x9009;</u></p>
+<p><em>&#x627E;&#x51FA;&#x524D;30&#x4E2A;&#x4E8C;&#x7EA7;&#x94FE;&#x63A5;</em></p>
+<p><img src="../img/76.png" alt></p>
+<ol start="5">
+<li>&#x5199;&#x4E00;&#x4E2A;&#x89E6;&#x53D1;&#x5668;&#xFF0C;&#x4F7F; emp &#x8868;&#x53EA;&#x6709;&#x5728;&#x5468;&#x4E00;&#x5230;&#x5468;&#x4E94; 8:00-18:00 &#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x6BB5;&#x624D;&#x53EF;&#x4EE5;&#x88AB;&#x4FEE;&#x6539;</li>
+</ol>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword keyword-create">create</span> <span class="token operator">or</span> <span class="token keyword keyword-replace">replace</span> <span class="token keyword keyword-trigger">trigger</span> emp_time
+    before <span class="token keyword keyword-insert">insert</span> <span class="token operator">or</span> <span class="token keyword keyword-update">update</span> <span class="token operator">or</span> <span class="token keyword keyword-delete">delete</span> <span class="token keyword keyword-on">on</span> emp
+<span class="token keyword keyword-begin">begin</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>to_char<span class="token punctuation">(</span>sysdate<span class="token punctuation">,</span><span class="token string">&apos;DY&apos;</span><span class="token punctuation">)</span> <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token string">&apos;&#x661F;&#x671F;&#x516D;&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;&#x661F;&#x671F;&#x65E5;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">or</span>
+        <span class="token punctuation">(</span>to_char<span class="token punctuation">(</span>sysdate<span class="token punctuation">,</span><span class="token string">&apos;HH24&apos;</span><span class="token punctuation">)</span> <span class="token operator">not</span> <span class="token operator">between</span> <span class="token string">&apos;08&apos;</span> <span class="token operator">and</span> <span class="token string">&apos;18&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-then">then</span>
+        <span class="token keyword keyword-if">if</span> deleting <span class="token keyword keyword-then">then</span> 
+            RAISE_APPLICATION_ERROR <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">20502</span><span class="token punctuation">,</span><span class="token string">&apos;You may delete from
+            EMP table only during business hours.&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        elsif inserting <span class="token keyword keyword-then">then</span>
+            RAISE_APPLICATION_ERROR <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">20500</span><span class="token punctuation">,</span><span class="token string">&apos;You may insert into
+            EMP table only during business hours.&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        elsif updating <span class="token keyword keyword-then">then</span>
+            RAISE_APPLICATION_ERROR <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">20503</span><span class="token punctuation">,</span><span class="token string">&apos;You may update
+            EMP only during business hours.&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-else">else</span>
+            RAISE_APPLICATION_ERROR <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">20504</span><span class="token punctuation">,</span><span class="token string">&apos;You mayupdate
+            EMP table only during normal hours.&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-end">end</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-end">end</span><span class="token punctuation">;</span> 
+<span class="token operator">/</span> 
+</pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
